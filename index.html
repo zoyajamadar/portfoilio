@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zoya Afsheen Jamadar – Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6fa;--ink:#0c1a33;--muted:#58657f;--accent:#0f766e;--accent-ink:#ffffff;--line:#d5dce8;--surface:#ffffff;--dot:#c9d2e2;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1424;--ink:#e9eefb;--muted:#9aa8c7;--accent:#4fd1c5;--accent-ink:#052321;--line:#25324d;--surface:#121e36;--dot:#1c2a46;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1424;--ink:#e9eefb;--muted:#9aa8c7;--accent:#4fd1c5;--accent-ink:#052321;--line:#25324d;--surface:#121e36;--dot:#1c2a46;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--ink);font-family:"Sora",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;background-color:var(--bg);background-image:radial-gradient(var(--dot) 1.2px,transparent 1.2px);background-size:26px 26px;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+
+.progress{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:20}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{max-width:1040px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;text-decoration:none;letter-spacing:-.01em}
+.mark{width:36px;height:36px;border-radius:10px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:.9rem}
+nav{position:relative;display:flex;gap:2px}
+nav a{position:relative;z-index:1;text-decoration:none;color:var(--muted);padding:9px 16px;border-radius:999px;font-size:.9rem;font-weight:600;transition:color .3s}
+nav a:hover{color:var(--ink)}
+nav a[aria-current="true"]{color:var(--accent-ink)}
+.ind{position:absolute;z-index:0;top:0;left:0;height:100%;border-radius:999px;background:var(--accent);transition:transform .45s cubic-bezier(.65,0,.25,1),width .45s cubic-bezier(.65,0,.25,1)}
+
+main{max-width:1040px;margin:0 auto;padding:0 28px}
+section{padding:88px 0;border-top:1px solid var(--line)}
+section:first-child{border-top:0}
+#home{min-height:calc(100vh - 62px);display:flex;align-items:center;padding:48px 0}
+
+.js .rv{opacity:0;transform:translateY(32px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i,0)*90ms)}
+.js .rv.show{opacity:1;transform:none}
+
+h1{font-size:clamp(2.6rem,8vw,5rem);line-height:1.02;font-weight:800;letter-spacing:-.04em;margin:0 0 22px}
+h2{font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.1;font-weight:800;letter-spacing:-.03em;margin:0 0 12px}
+h3{font-size:1.2rem;margin:0 0 8px;letter-spacing:-.01em}
+p{margin:0 0 16px;max-width:62ch}
+.sub{color:var(--muted);margin-bottom:40px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:40ch;margin-bottom:32px}
+.role{display:inline-block;font-weight:600;font-size:.9rem;color:var(--accent);border:1px solid var(--accent);padding:6px 14px;border-radius:999px;margin-bottom:24px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 26px;border-radius:12px;font-weight:600;text-decoration:none;border:2px solid var(--accent);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+
+.hero{display:grid;gap:48px;grid-template-columns:1.25fr .75fr;align-items:center;width:100%}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px}
+.id{text-align:center}
+.avatar{width:120px;height:120px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;font-size:2.4rem;font-weight:800;letter-spacing:-.03em;color:var(--accent);border:3px solid var(--accent)}
+.id p{margin:0 auto 4px;color:var(--muted);font-size:.95rem}
+.id strong{display:block;font-size:1.1rem}
+.id a{display:inline-block;margin-top:14px;font-weight:600;color:var(--accent);text-decoration:none;border-bottom:2px solid currentColor}
+
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.card p{color:var(--muted);margin:0}
+.hover{transition:transform .3s,border-color .3s}
+.hover:hover{transform:translateY(-6px);border-color:var(--accent)}
+.label{display:block;color:var(--muted);font-size:.85rem;margin-bottom:4px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:20px 0 0;list-style:none}
+.tags li{font-size:.82rem;font-weight:600;padding:5px 12px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.timeline{border-left:3px solid var(--accent);padding:2px 0 2px 24px;margin:28px 0 0;max-width:560px}
+.timeline strong{display:block;font-size:1.15rem}
+.timeline span{color:var(--muted)}
+
+.contact{max-width:680px;display:grid}
+.contact a,.contact div{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:4px 16px;padding:22px 4px;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600;font-size:clamp(1rem,3.6vw,1.3rem);overflow-wrap:anywhere;transition:padding .3s,color .3s}
+.contact a:hover{color:var(--accent);padding-left:14px}
+.contact span{color:var(--muted);font-weight:400;font-size:.9rem}
+
+footer{max-width:1040px;margin:0 auto;padding:24px 28px 32px;color:var(--muted);font-size:.88rem}
+
+@media (max-width:720px){
+ html{scroll-padding-top:0}
+ header{position:fixed;top:auto;bottom:0;left:0;right:0;border-bottom:0;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+ .brand{display:none}
+ .bar{padding:8px;justify-content:center}
+ nav{width:100%}
+ nav a{flex:1;text-align:center;padding:11px 2px;font-size:.78rem}
+ main{padding:0 20px}
+ section{padding:64px 0}
+ #home{min-height:calc(100vh - 70px);padding:40px 0}
+ .hero{grid-template-columns:1fr;gap:32px}
+ footer{padding:24px 20px 96px}
+}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .js .rv{opacity:1;transform:none;transition:none}
+ .ind,.btn,.hover,.contact a{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header>
+ <div class="bar">
+  <a class="brand" href="#home"><span class="mark">ZJ</span>Zoya Afsheen Jamadar</a>
+  <nav aria-label="Main" id="nav">
+   <span class="ind" aria-hidden="true"></span>
+   <a href="#home">Home</a>
+   <a href="#about">About</a>
+   <a href="#skills">Skills</a>
+   <a href="#projects">Projects</a>
+   <a href="#contact">Contact</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+ <section id="home">
+  <div class="hero">
+   <div>
+    <span class="role rv">Engineering student</span>
+    <h1 class="rv">Zoya Afsheen Jamadar</h1>
+    <p class="lead rv">I build web pages and machine learning projects with Python, and I’m studying at BLDEA Engineering College.</p>
+    <div class="actions rv">
+     <a class="btn primary" href="#projects">View projects</a>
+     <a class="btn ghost" href="#contact">Contact me</a>
+    </div>
+   </div>
+   <div class="card id rv">
+    <div class="avatar">ZJ</div>
+    <strong>Zoya Afsheen Jamadar</strong>
+    <p>BLDEA Engineering College</p>
+    <p>Vijayapura, Karnataka</p>
+    <a href="https://github.com/zoyajamadar" target="_blank" rel="noopener">github.com/zoyajamadar</a>
+   </div>
+  </div>
+ </section>
+
+ <section id="about">
+  <h2 class="rv">About me</h2>
+  <p class="sub rv">An engineering student from Vijayapura who likes turning ideas into working software.</p>
+  <p class="rv">I enjoy web development, Python programming and artificial intelligence and machine learning. I practise data structures and algorithms to improve my problem solving, and I build projects to apply what I learn.</p>
+  <div class="timeline rv">
+   <span class="label">Education</span>
+   <strong>BLDEA Engineering College</strong>
+   <span>Vijayapura, Karnataka</span>
+  </div>
+ </section>
+
+ <section id="skills">
+  <h2 class="rv">Skills</h2>
+  <p class="sub rv">The tools and subjects I work with.</p>
+  <div class="grid">
+   <div class="card hover rv"><h3>Web development</h3><p>Building clean, responsive pages.</p><ul class="tags"><li>HTML</li><li>CSS</li></ul></div>
+   <div class="card hover rv"><h3>Programming</h3><p>Writing code and solving problems.</p><ul class="tags"><li>Python</li><li>DSA</li></ul></div>
+   <div class="card hover rv"><h3>Artificial intelligence</h3><p>Training models on real data.</p><ul class="tags"><li>AI</li><li>Machine learning</li></ul></div>
+  </div>
+ </section>
+
+ <section id="projects">
+  <h2 class="rv">Projects</h2>
+  <p class="sub rv">Machine learning work you can find on my GitHub.</p>
+  <div class="grid">
+   <article class="card hover rv">
+    <h3>Employee salary prediction</h3>
+    <p>A model that predicts an employee’s salary from their details.</p>
+    <ul class="tags"><li>Machine learning</li><li>Prediction</li></ul>
+    <p style="margin-top:20px"><a class="btn ghost" href="https://github.com/zoyajamadar" target="_blank" rel="noopener">View on GitHub</a></p>
+   </article>
+   <article class="card hover rv">
+    <h3>Message spam detection</h3>
+    <p>A classifier that separates spam messages from genuine ones.</p>
+    <ul class="tags"><li>Machine learning</li><li>Classification</li></ul>
+    <p style="margin-top:20px"><a class="btn ghost" href="https://github.com/zoyajamadar" target="_blank" rel="noopener">View on GitHub</a></p>
+   </article>
+  </div>
+ </section>
+
+ <section id="contact">
+  <h2 class="rv">Contact</h2>
+  <p class="sub rv">Open to internships and collaborations. Reach me here.</p>
+  <div class="contact rv">
+   <a href="mailto:zoyajamadarzoya@gmail.com">zoyajamadarzoya@gmail.com <span>Email</span></a>
+   <a href="tel:+917676874190">7676874190 <span>Phone</span></a>
+   <a href="https://github.com/zoyajamadar" target="_blank" rel="noopener">github.com/zoyajamadar <span>GitHub</span></a>
+   <div>Vijayapura, Karnataka <span>Address</span></div>
+  </div>
+ </section>
+</main>
+
+<footer>© <span id="yr"></span> Zoya Afsheen Jamadar</footer>
+
+<script>
+(function(){
+ var root=document.documentElement;
+ root.classList.add('js');
+ document.getElementById('yr').textContent=new Date().getFullYear();
+ var nav=document.getElementById('nav');
+ var links=[].slice.call(nav.querySelectorAll('a'));
+ var ind=nav.querySelector('.ind');
+ var sections=[].slice.call(document.querySelectorAll('main section'));
+ var bar=document.getElementById('progress');
+
+ function setActive(id){
+  var a=null;
+  links.forEach(function(l){
+   var on=l.getAttribute('href')==='#'+id;
+   if(on){l.setAttribute('aria-current','true');a=l}else l.removeAttribute('aria-current');
+  });
+  if(a){ind.style.width=a.offsetWidth+'px';ind.style.transform='translateX('+a.offsetLeft+'px)'}
+ }
+ function reposition(){
+  var a=nav.querySelector('[aria-current="true"]');
+  if(a){ind.style.width=a.offsetWidth+'px';ind.style.transform='translateX('+a.offsetLeft+'px)'}
+ }
+
+ sections.forEach(function(s){
+  [].slice.call(s.querySelectorAll('.rv')).forEach(function(el,i){el.style.setProperty('--i',i)});
+ });
+
+ if('IntersectionObserver' in window){
+  var reveal=new IntersectionObserver(function(entries){
+   entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');reveal.unobserve(e.target)}});
+  },{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+  [].slice.call(document.querySelectorAll('.rv')).forEach(function(el){reveal.observe(el)});
+
+  var spy=new IntersectionObserver(function(entries){
+   entries.forEach(function(e){if(e.isIntersecting)setActive(e.target.id)});
+  },{rootMargin:'-45% 0px -50% 0px'});
+  sections.forEach(function(s){spy.observe(s)});
+ }else{
+  [].slice.call(document.querySelectorAll('.rv')).forEach(function(el){el.classList.add('show')});
+ }
+
+ function onScroll(){
+  var max=root.scrollHeight-window.innerHeight;
+  var p=max>0?Math.min(1,window.scrollY/max):0;
+  bar.style.transform='scaleX('+p+')';
+  if(window.innerHeight+window.scrollY>=root.scrollHeight-4)setActive('contact');
+ }
+ window.addEventListener('scroll',onScroll,{passive:true});
+ window.addEventListener('resize',reposition);
+ window.addEventListener('load',reposition);
+ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(reposition);
+ setActive('home');
+ onScroll();
+})();
+</script>
+</body>
+</html>
